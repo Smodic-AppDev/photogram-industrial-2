@@ -1,1 +1,13 @@
-Hi
+<div class="row">
+  <div class=" col-md- offset-md-3">
+
+    <h1>
+      <%= @user.username %>
+    </h1>
+
+    <%= render "shared/navtabs" %>
+
+  </div>
+</div>
+
+<%= render "users/user_list", user_list: @user.followers %>

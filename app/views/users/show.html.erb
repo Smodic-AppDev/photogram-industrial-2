@@ -5,24 +5,7 @@
       <%= @user.username %>
     </h1>
 
-    <ul class="nav nav-pills nav-justified">
-      
-      <li class="nav-item">
-        <%= link_to "Posts", user_path(@user.username), class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Liked Photos", liked_photos_path(@user.username), class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Feed", user_feed_path(@user.username), class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Followers", user_followers_path(@user.username), class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Following", user_following_path(@user.username), class: "nav-link" %>
-      </li>
-    </ul>
+    <%= render "shared/navtabs" %>
 
   </div>
 </div>
