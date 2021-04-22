@@ -13,21 +13,22 @@
       <li class="nav-item">
         <%= link_to "Liked Photos", liked_photos_path(@user.username), class: "nav-link" %>
       </li>
+
+
       <li class="nav-item">
-        <%= link_to "Feed", user_feed_path(@user.username), class: "nav-link" %>
+        <a class="nav-link" href="#">Feed</a>
       </li>
       <li class="nav-item">
-        <%= link_to "Followers", user_followers_path(@user.username), class: "nav-link" %>
+        <a class="nav-link" href="#">Followers</a>
       </li>
       <li class="nav-item">
-        <%= link_to "Following", user_following_path(@user.username), class: "nav-link" %>
+        <a class="nav-link" href="#">Following</a>
       </li>
     </ul>
 
   </div>
 </div>
 
-<% current_user.own_photos.each do |zebra| %>
-    <%= render "photos/photo", giraffe: zebra %>
+<% current_user.liked_photos.each do |photo| %>
+  <%= render "photos/photo", giraffe: photo %>
 <% end %>
-
