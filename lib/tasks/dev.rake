@@ -9,12 +9,16 @@ task sample_data: :environment do
     User.delete_all    
   end
 
-  12.times do
+  usernames = Array.new {Faker::Name.first_name }
 
-    name = Faker::Name.first_name.downcase
-    u = User.create(
-      email: "#{name}@example.com",
-      username: name,
+  usernames << "alice"
+  usernames << "bob"
+
+  usernames.each do |username|
+
+    User.create(
+      email: "#{username}@example.com",
+      username: username.downcase,
       password: "password",
       private: [true, false].sample
     )
