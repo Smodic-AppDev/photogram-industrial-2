@@ -10,6 +10,6 @@
   </div>
 </div>
 
-<% current_user.liked_photos.each do |photo| %>
+<% @user.liked_photos.each do |photo| %>
   <%= render "photos/photo", giraffe: photo %>
 <% end %>

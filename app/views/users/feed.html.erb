@@ -10,6 +10,6 @@
   </div>
 </div>
 
-<% current_user.feed.each do |photo| %>
+<% @user.feed.each do |photo| %>
   <%= render "photos/photo", giraffe: photo %>
 <% end %>

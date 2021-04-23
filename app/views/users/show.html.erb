@@ -10,7 +10,7 @@
   </div>
 </div>
 
-<% current_user.own_photos.each do |zebra| %>
+<% @user.own_photos.each do |zebra| %>
     <%= render "photos/photo", giraffe: zebra %>
 <% end %>
 
